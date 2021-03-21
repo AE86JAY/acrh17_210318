@@ -13,9 +13,9 @@
 #
 # echo '删除重复多余主题'
 rm -rf ./feeds/freifunk/themes
-rm -rf ./package/lean/luci-theme-netgear
-rm -rf ./package/lean/luci-theme-argon
-rm -rf ./package/luci/themes/luci-theme-material
+rm -rf ./package/lede/luci-theme-netgear
+rm -rf ./package/lede/luci-theme-argon
+rm -rf ./package/lede/themes/luci-theme-material
 
 # 从feed取消wifidog源码
 # sed -i 's/^#\(.*apfree_wifidog\)/\1/' feeds.conf.default
@@ -24,7 +24,7 @@ rm -rf ./package/luci/themes/luci-theme-material
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 # echo '添加apfree-wifidog'
-# sed -i '$a src-git liudf0716 https://github.com/liudf0716/apfree_wifidog' feeds.conf.default
+sed -i '$a src-git liudf0716 https://github.com/liudf0716/apfree_wifidog' feeds.conf.default
 
 # echo '修改 默认IP'
 sed -i "s/192.168.1.1/192.168.5.1/g" package/base-files/files/bin/config_generate
