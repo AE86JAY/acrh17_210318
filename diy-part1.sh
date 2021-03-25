@@ -31,7 +31,7 @@ sed -i "s/OpenWrt/ACRH17/g" package/base-files/files/bin/config_generate
 # echo '添加apfree-wifidog
 # git clone https://github.com/liudf0716/apfree_wifidog.git ./package/diy/apfree_wifidog
 # echo '添加apfree-wifidog配置界面'
-git clone https://github.com/AE86JAY/luci-app-apfree_wifidog.git ./package/diy/luci-apfree_wifidog
+git clone https://github.com/AE86JAY/luci-app-apfree_wifidog ./package/diy/luci-apfree_wifidog
 # echo '添加 SSR Plus+'
 git clone https://github.com/Mattraks/helloworld.git ./package/diy/ssrplus
 # echo '添加 小猫咪'
