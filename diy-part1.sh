@@ -15,10 +15,10 @@
 rm -rf ./feeds/freifunk/themes
 rm -rf ./package/lean/luci-theme-netgear
 rm -rf ./package/lean/luci-theme-argon
-rm -rf ./feeds/luci/themes/luci-theme-material
+rm -rf ./feeds/lean/themes/luci-theme-material
 
 # 从feed取消wifidog源码
-sed -i 's/^#\(.*apfree-wifidog\)/\1/' feeds.conf.default
+# sed -i 's/^#\(.*apfree-wifidog\)/\1/' feeds.conf.default
 
 # 添加源码到feed
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
@@ -29,7 +29,7 @@ sed -i "s/192.168.1.1/192.168.5.1/g" package/base-files/files/bin/config_generat
 sed -i "s/OpenWrt/ACRH17/g" package/base-files/files/bin/config_generate
 
 # echo '添加apfree-wifidog
-git clone https://github.com/liudf0716/apfree_wifidog.git ./package/diy/apfree-wifidog
+# git clone https://github.com/liudf0716/apfree_wifidog.git ./package/diy/apfree-wifidog
 # echo '添加apfree-wifidog配置界面'
 git clone https://github.com/AE86JAY/luci-app-apfree_wifidog ./package/diy/luci-apfree-wifidog
 # echo '添加 SSR Plus+'
@@ -39,7 +39,7 @@ git clone https://github.com/vernesong/OpenClash.git ./package/diy/OpenClash
 # echo '添加 Passwall'
 git clone https://github.com/xiaorouji/openwrt-passwall.git ./package/diy/passwall
 # echo '添加 HelloWorld'
-git clone https://github.com/jerrykuku/lua-maxminddb.git ./package/diy/lua-maxminddb
+# git clone https://github.com/jerrykuku/lua-maxminddb.git ./package/diy/lua-maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr.git ./package/diy/luci-app-vssr
 # echo '添加infinityfreedom主题'
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git ./package/lean/luci-theme-infinityfreedom
