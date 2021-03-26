@@ -18,7 +18,7 @@ rm -rf ./package/lean/luci-theme-argon
 rm -rf ./feeds/luci/themes/luci-theme-material
 
 # 从feed取消wifidog源码
-# sed -i 's/^#\(.*apfree_wifidog\)/\1/' feeds.conf.default
+sed -i 's/^#\(.*apfree-wifidog\)/\1/' feeds.conf.default
 
 # 添加源码到feed
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
@@ -29,9 +29,9 @@ sed -i "s/192.168.1.1/192.168.5.1/g" package/base-files/files/bin/config_generat
 sed -i "s/OpenWrt/ACRH17/g" package/base-files/files/bin/config_generate
 
 # echo '添加apfree-wifidog
-# git clone https://github.com/liudf0716/apfree_wifidog.git ./package/diy/apfree_wifidog
+git clone https://github.com/liudf0716/apfree_wifidog.git ./package/diy/apfree-wifidog
 # echo '添加apfree-wifidog配置界面'
-git clone https://github.com/AE86JAY/luci-app-apfree_wifidog ./package/diy/luci-apfree_wifidog
+git clone https://github.com/AE86JAY/luci-app-apfree_wifidog ./package/diy/luci-apfree-wifidog
 # echo '添加 SSR Plus+'
 git clone https://github.com/Mattraks/helloworld.git ./package/diy/ssrplus
 # echo '添加 小猫咪'
