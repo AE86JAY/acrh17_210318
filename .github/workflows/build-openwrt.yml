@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build openwrt_21-03-23-14-20-test1
+name: Build openwrt_21-03-26-test1
 
 on:
   repository_dispatch:
