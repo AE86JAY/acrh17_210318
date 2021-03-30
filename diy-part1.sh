@@ -29,10 +29,9 @@ sed -i "s/192.168.1.1/192.168.5.1/g" package/base-files/files/bin/config_generat
 sed -i "s/OpenWrt/ACRH17/g" package/base-files/files/bin/config_generate
 
 # echo '添加 小猫咪'
-git clone https://github.com/vernesong/OpenClash.git ./package/diy/OpenClash
+# git clone https://github.com/vernesong/OpenClash.git ./package/diy/OpenClash
 # echo '添加 Passwall'
-git clone https://github.com/xiaorouji/openwrt-passwall.git ./package/diy/passwall
+# git clone https://github.com/xiaorouji/openwrt-passwall.git ./package/diy/passwall
 # luci-app-apfree_wifidog
 git clone git clone https://github.com/ai2online/luci-app-apfree_wifidog.git ./package/lean
-
 ./scripts/feeds update -i
