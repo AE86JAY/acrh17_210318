@@ -32,64 +32,7 @@ sed -i "s/OpenWrt/ACRH17/g" package/base-files/files/bin/config_generate
 git clone https://github.com/vernesong/OpenClash.git ./package/diy/OpenClash
 # echo '添加 Passwall'
 git clone https://github.com/xiaorouji/openwrt-passwall.git ./package/diy/passwall
-# ech
-# echo '调整 SSRP 到 GFW 菜单'
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/model/cbi/shadowsocksr/advanced.lua
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/model/cbi/shadowsocksr/client.lua
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/model/cbi/shadowsocksr/client-config.lua
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/model/cbi/shadowsocksr/control.lua
+# luci-app-apfree_wifidog
+git clone git clone https://github.com/ai2online/luci-app-apfree_wifidog.git ./package/lean
 
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/model/cbi/shadowsocksr/log.lua
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/model/cbi/shadowsocksr/server.lua
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/model/cbi/shadowsocksr/server-config.lua
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/model/cbi/shadowsocksr/servers.lua
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/model/cbi/shadowsocksr/status.lua
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/view/shadowsocksr/certupload.htm
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/view/shadowsocksr/check.htm
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/view/shadowsocksr/checkport.htm
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/view/shadowsocksr/ping.htm
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/view/shadowsocksr/refresh.htm
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/view/shadowsocksr/reset.htm
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/view/shadowsocksr/server_list.htm
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/view/shadowsocksr/socket.htm
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/view/shadowsocksr/ssrurl.htm
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/view/shadowsocksr/status.htm
-sed -i 's/services/vpn/g' package/diy/ssrplus/luci-app-ssr-plus/luasrc/view/shadowsocksr/subscribe.htm
-# echo '调整 PassWall 到 GFW 菜单'
-sed -i 's/services/vpn/g' package/diy/passwall/luci-app-passwall/luasrc/controller/passwall.lua
-sed -i 's/services/vpn/g' package/diy/passwall/luci-app-passwall/luasrc/model/cbi/passwall/api/api.lua
-# echo '调整 OpenClash 到 GFW 菜单'
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/controller/openclash.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/client.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/config.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/config-subscribe.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/config-subscribe-edit.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/game-rules-manage.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/groups-config.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/other-rules-edit.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/proxy-provider-config.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/proxy-provider-file-manage.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/rule-providers-config.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/rule-providers-file-manage.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/rule-providers-manage.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/rule-providers-settings.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/servers.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/servers-config.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/model/cbi/openclash/settings.lua
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/view/openclash/download_rule.htm
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/view/openclash/log.htm
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/view/openclash/server_list.htm
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/view/openclash/status.htm
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/view/openclash/switch_mode.htm
-sed -i 's/services/vpn/g' package/diy/OpenClash/luci-app-openclash/luasrc/view/openclash/update.htm
-# echo '调整 V2ray服务器 到 GFW 菜单'
-sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/controller/v2ray_server.lua
-sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/index.lua
-sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/user.lua
-sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/view/v2ray_server/log.htm
-sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/view/v2ray_server/users_list_status.htm
-sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/view/v2ray_server/v2ray.htm
-
-# echo '更新feeds'
 ./scripts/feeds update -i
